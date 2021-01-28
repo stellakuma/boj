@@ -1,0 +1,36 @@
+conditions:
+fl : n as car count =< 50
+sl : enter time
+tl : output time
+fl : t as speed reference time
+fl : 0 < f as maximum of fine =< 10000
+
+
+output:
+min fine    max fine
+
+
+int n,t,f = 0;
+	scanf( "%d", &n );
+	printf( "\n" );
+int sl,tl [n];
+	for ( int i = 0; i < n; i++ ){
+		if ( i == 10 ){
+			printf( "\n" );
+			break;
+		} else {
+				scanf( "%d", &sl[i] );
+			}
+	}
+	for ( int i = 0; i < n; i++ ){
+		if ( i == 10 ){
+			printf( "\n" );
+			break;
+		} else {
+				scanf( "%d", &tl[i] );
+			}
+	}
+	scanf( "%d", "t" );
+	printf( "\n" );
+	scanf( "%d", "f" );
+	printf( "\n" );

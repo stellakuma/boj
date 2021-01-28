@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main(){
+
+	int n, t, s = 0;
+	scanf( "%d", &n );
+	if ( n < 10 ){ s++; }
+	
+	while( n != t ){
+
+		if ( s == 0 ){
+			if( n < 10 ){
+				t = n*10+n;
+			} else {
+				t = n;
+			}
+		}
+		int s1, s2;
+		s1 = t%10;
+		s2 = s1+(t/10);
+		if( s2 >= 10 ){ s2 = s2%10; }
+		t = (s1*10)+s2;
+		s++;
+	}
+
+	printf( "%d", s );
+
+}
