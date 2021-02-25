@@ -7,24 +7,50 @@ int main(){
 
 	string s = "";
 	getline(cin, s);
-	int n = 0;
-	int ag = 0;
+	int l = s.length();
 	
-	for( int i = 0; i < s.length(); i++ ){
+	bool flag = 0;
+	
+	for( int i = 0; i < l; i++ ){
 		
-		if( (ag == 0) & (int(s.at(i)) == 32) ){
+		if( (int)s[i] != 32 ){
 			
-			n += 1;
-			ag += 1;
-			
-		} else if( (ag >= 1) & (int(s.at(i) != 32)) ){
-			
-			ag = 0;
-			
+			s.replace(0, i, "");
+			l = s.length();
+			break;
+		}
+		
+		if( i == l-1 ){
+		
+		    s.replace(s.begin(), s.end(), "");
+			l = s.length();
+		    flag = 1;
+			break;
+
 		}
 		
 	}
+	
+	
+	for( int i = l-1; i > -1; i-- ){
+		
+		if( (int)s[i] != 32 ){
+			
+			s.replace(i, l-1, "");
+			l = s.length();
+			break;
+		}
+		
+	}
+	
+	l = s.length();
+	int c = 0;
+	for( int i = 0; i < l; i++ ){
+		
+		if( (int)s[i] == 32 ) c += 1;
+		
+	}
 
-	cout << n+1;
+	( flag == 0 )? cout << c+1 : cout << 0;
 
 }
