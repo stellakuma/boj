@@ -18,6 +18,8 @@ int main(){
 		cin >> temp[i];
 		for( int j = 0; j < temp[i].length(); j++ ){
 			
+			cout << a[121] << endl;
+			
 			if( crnt != (int)(temp[i].at(j)) ){
 				
 				if( a[(int)(temp[i].at(j))] == 0 ){
